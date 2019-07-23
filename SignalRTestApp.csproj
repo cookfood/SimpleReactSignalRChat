@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>7dcb4f81-dd36-4474-a838-9dc38f8b92fd</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="React\client.tsx" />
+    <None Remove="React\components\Chat.tsx" />
+    <None Remove="React\components\ChatApp.tsx" />
+    <None Remove="React\hub\hub.ts" />
+    <None Remove="React\store\models\chat.ts" />
+    <None Remove="React\store\store.ts" />
+    <None Remove="React\store\types.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="React\client.tsx" />
+    <TypeScriptCompile Include="React\components\Chat.tsx" />
+    <TypeScriptCompile Include="React\components\ChatApp.tsx" />
+    <TypeScriptCompile Include="React\hub\hub.ts" />
+    <TypeScriptCompile Include="React\store\models\chat.ts" />
+    <TypeScriptCompile Include="React\store\store.ts" />
+    <TypeScriptCompile Include="React\store\types.d.ts" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+﻿{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "jsx": "react"
+  },
+  "exclude": [
+    "wwwroot"
+  ],
+  "include": [
+    "./**/*"
+  ]
+}
